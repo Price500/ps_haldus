@@ -7,4 +7,4 @@ foreach ($kasutaja in $kasutajad){
     $kontokirjeldus = $kasutaja.KontoKirjeldus
     $parool = $kasutaja.Parool | ConvertTo-SecureString -AsPlainText -Force
 
-    New-LocalUser -Name $kasutajanimi -Password $parool -FullName "$taisnimi" -Description "$kontokirjeldus"}
+    New-LocalUser -Name $kasutajanimi -Password $parool -FullName "$taisnimi" -Description "$kontokirjeldus" -ErrorAction SilentlyContinue}
